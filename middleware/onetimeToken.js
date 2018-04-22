@@ -7,7 +7,7 @@ function generateToken({ stringBase = 'base64', byteLength = 48 } = {}) {
       if (err) {
         reject(err);
       } else {
-        resolve(buffer.toString(stringBase).replace('+', ''));
+        resolve(buffer.toString(stringBase).replace(/\+/g, ''));
       }
     });
   });
