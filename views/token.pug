@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= title
+  p 画面遷移に必要なTokenを発行しました ↓
+  a(href=`http://localhost:3000/users?token=${token}`) このままTokenを使用して画面遷移を行う
